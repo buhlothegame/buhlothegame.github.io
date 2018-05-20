@@ -1,0 +1,27 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    var counter = 0;
+    var stringsArr = ["","За встречу","За ноушн", "За любовь", "За милых дам", "За кино", "За опию", "За сталина"]
+
+    $(document).ready(function(){
+      $(".button").on("click", function(){
+        counter++;
+        document.getElementById("counter").innerHTML = counter;
+        document.getElementById("tost").innerHTML = stringsArr[counter];
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="score"><p>Your score is:</p> <p id="counter">0</p></div>
+  <div class="tost" id="tost">за встречу</div>
+  <div class="button">Выпил</div>
+</body>
+</html>
